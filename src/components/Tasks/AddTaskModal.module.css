@@ -1,0 +1,117 @@
+/* src/components/Tasks/AddTaskModal.module.css */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 2em;
+  color: #ff6347;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #696969;
+}
+
+.required {
+  color: red;
+}
+
+.rewardInputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.rewardInputContainer input {
+  flex: 1;
+}
+
+.currency {
+  margin-left: 10px;
+  font-size: 1.2em;
+  color: #ffa500;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.checkboxContainer input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.checkboxContainer label {
+  margin-left: 10px;
+  color: #696969;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.cancelBtn, .addBtn {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+.cancelBtn {
+  background: #ffb6c1;
+  color: white;
+}
+
+.cancelBtn:hover {
+  background: #ff69b4;
+}
+
+.addBtn {
+  background: #32cd32;
+  color: white;
+}
+
+.addBtn:disabled {
+  background: #90ee90;
+  cursor: not-allowed;
+}
+
+.addBtn:hover:not(:disabled) {
+  background: #228b22;
+}
+

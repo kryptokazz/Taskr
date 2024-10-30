@@ -1,0 +1,176 @@
+/* src/styles/styles.css */
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.auth-container, .habit-form-container {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2, .habit-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-container label, .habit-form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.auth-container input, .habit-form-container input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5c6bc0;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3949ab;
+}
+
+.sidebar {
+  width: 80px;
+  background-color: #ffefd5;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+}
+
+.menu-item {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 1.8em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: scale(1.1);
+}
+
+.menu-item.active {
+  background-color: #ffdb58;
+}
+
+.main-content {
+  margin-left: 100px; /* Adjust based on sidebar width */
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-card {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.task-card.complete {
+  background-color: #dcedc8;
+}
+
+.task-card.pending {
+  background-color: #ffe0b2;
+}
+
+.task-card button {
+  margin-top: 10px;
+  background-color: #66bb6a;
+}
+
+.task-card button:hover {
+  background-color: #43a047;
+}
+
+.required {
+  color: red;
+}
+
+.reward-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.reward-input-container .currency {
+  margin-left: 10px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.checkbox-container label {
+  margin-left: 5px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  background-color: #ef5350;
+}
+
+.cancel-btn:hover {
+  background-color: #e53935;
+}
+
+.add-btn {
+  background-color: #66bb6a;
+}
+
+.add-btn:hover {
+  background-color: #43a047;
+}
+
+.task-status h2 {
+  margin-top: 20px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header #wallet {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+

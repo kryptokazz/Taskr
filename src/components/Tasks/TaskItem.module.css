@@ -1,0 +1,70 @@
+/* TaskItem.module.css */
+
+.taskCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.taskCard.approved {
+  background-color: #f0f9ff;
+}
+
+.taskCard.complete {
+  background-color: #e6ffed;
+}
+
+.taskDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: bold;
+  color: #333;
+}
+
+.completeBtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.completeBtn:hover {
+  background-color: #45a049;
+}
+
+.awaitingApproval,
+.completedLabel {
+  font-style: italic;
+  color: #888;
+}
+
+
+.expired {
+  border-left: 5px solid red;
+}
+
+.expiredLabel {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+.priority {
+  display: block;
+  margin-top: 5px;
+}
+
+.expiryDate {
+  display: block;
+  margin-top: 5px;
+  color: #555;
+}

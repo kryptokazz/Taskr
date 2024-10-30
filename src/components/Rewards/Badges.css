@@ -1,0 +1,53 @@
+/* src/components/Rewards/Badges.css */
+
+.badges-section {
+    margin: 30px 0;
+}
+
+.badges-section h2 {
+    font-size: 1.8em;
+    color: #6a5acd;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.badges-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.badge {
+    width: 80px;
+    height: 80px;
+    background: #e6e6fa;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.badge img {
+    width: 60%;
+    height: 60%;
+}
+
+.badge.earned::after {
+    content: '✓';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #32cd32;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 1em;
+}
+

@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Layout/Navbar';
+import Dashboard from './components/Tasks/Dashboard';
+import Rewards from './components/Rewards/Rewards';
+import ParentMode from './components/ParentMode/ParentMode';
+import PrivateRoute from './components/Routing/PrivateRoute';
+import AuthProvider from './context/AuthContext';
+import Login from './components/Auth/Login';
+import Register from './components/Auth/Register';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/rewards"
+            element={
+              <PrivateRoute>
+                <Rewards />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/parent-mode"
+            element={
+              <PrivateRoute>
+                <ParentMode />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
-}
+};
 
 export default App;
+
